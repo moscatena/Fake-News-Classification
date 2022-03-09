@@ -30,17 +30,17 @@ The data consists of 12.8k rows with 14 different features containing: Statement
  * The dataset was made with the specific mission to improve Natural Language Processing models, so we'll use it for that.
 
  Inside Natural Language Processing there are several ways to work with the data. In this project I'll use the following vectorizers:
-  - *Count Vectorizer*: Converts documents into a sequence of words and count how often they appear in the document.
-  - *Term Frequency Inverse Document Frequency*: Calculates how frequently a word appears in a document and multiplies it by the inverse of how frequently the word appears in the whole corpus.
-  - *Hash Vectorizer*: Converts a collection of text documents to a matrix of token occurrences.
+  - **Count Vectorizer**: Converts documents into a sequence of words and count how often they appear in the document.
+  - **Term Frequency Inverse Document Frequency**: Calculates how frequently a word appears in a document and multiplies it by the inverse of how frequently the word appears in the whole corpus.
+  - **Hash Vectorizer**: Converts a collection of text documents to a matrix of token occurrences.
   I'll combine each of these with a n-gram range to try to improve results. The ranges used will be of (1,1), which accounts only for unigrams, (1,2), which accounts for both unigrams and bigrams, and (2,2), which accounts only for bigrams.
 
 Several embedding techniques will be used as well. They are:
- - *Word2Vec*: First released in a 2013 paper entitled [Efficient Estimation of Word Representations in Vector Space](https://www.researchgate.net/publication/234131319_Efficient_Estimation_of_Word_Representations_in_Vector_Space). Word2Vec creates vectors that represent each word in a corpus. Each word can be pinpointed in a N-Dimensional space, and words that have semantic similarity with each other appear closer in that space than others.
- - *Glove*: GloVe is an unsupervised learning algorithm for obtaining vector representations for words. We can find their code, different glove sizes and the 2014 paper in which it was released in their website [Glove: Global Vectors for Word Representation](https://nlp.stanford.edu/projects/glove/).
- - *Doc2Vec*: It was introduced by Tomas Mikolov in 2014 in his paper [Distributed Representations of Sentences and Documents](https://arxiv.org/abs/1405.4053). There he presents the concept of 'Paragraph Vector'. It is similar to Word2Vec, where words are in a multidimensional space and the ones with semantic similarities are closer together, but it expands to paragraphs. In this sense, just as in Word2Vec the words 'big' and 'huge' would be closer together than 'computer', in Doc2Vec the sentences 'I love food' and 'meals are great' would be closer in space than 'my computer is big'.
-- *nnlm-en-dim128*: This text embedding was based on feed-forward Neural-Net Language Models proposed in 2013 in the paper [A Neural Probabilistic Language Model](https://dl.acm.org/doi/10.5555/944919.944966). It's a token based text embedding module trained on English Google News. It takes a batch of sentences in a 1-D tensor of strings as input and transforms words or sentences in Tensorflow slices with 128 dimensions.
-- *Sentence Embedding*: Sentence embedding takes one step further from word embedding and works directly with sentences. It makes vector representations of entire sentences and their semantic information. Here I'll be using Googles Universal Sentence Encoder. In their 2018 paper [Universal Sentence Encoder](https://arxiv.org/abs/1803.11175) the authors explain how they create the sentence embedding models and give instructions to implement them with Tensorflow.
+ - **Word2Vec**: First released in a 2013 paper entitled [Efficient Estimation of Word Representations in Vector Space](https://www.researchgate.net/publication/234131319_Efficient_Estimation_of_Word_Representations_in_Vector_Space). Word2Vec creates vectors that represent each word in a corpus. Each word can be pinpointed in a N-Dimensional space, and words that have semantic similarity with each other appear closer in that space than others.
+ - **Glove**: GloVe is an unsupervised learning algorithm for obtaining vector representations for words. We can find their code, different glove sizes and the 2014 paper in which it was released in their website [Glove: Global Vectors for Word Representation](https://nlp.stanford.edu/projects/glove/).
+ - **Doc2Vec**: It was introduced by Tomas Mikolov in 2014 in his paper [Distributed Representations of Sentences and Documents](https://arxiv.org/abs/1405.4053). There he presents the concept of 'Paragraph Vector'. It is similar to Word2Vec, where words are in a multidimensional space and the ones with semantic similarities are closer together, but it expands to paragraphs. In this sense, just as in Word2Vec the words 'big' and 'huge' would be closer together than 'computer', in Doc2Vec the sentences 'I love food' and 'meals are great' would be closer in space than 'my computer is big'.
+- **nnlm-en-dim128**: This text embedding was based on feed-forward Neural-Net Language Models proposed in 2013 in the paper [A Neural Probabilistic Language Model](https://dl.acm.org/doi/10.5555/944919.944966). It's a token based text embedding module trained on English Google News. It takes a batch of sentences in a 1-D tensor of strings as input and transforms words or sentences in Tensorflow slices with 128 dimensions.
+- **Sentence Embedding**: Sentence embedding takes one step further from word embedding and works directly with sentences. It makes vector representations of entire sentences and their semantic information. Here I'll be using Googles Universal Sentence Encoder. In their 2018 paper [Universal Sentence Encoder](https://arxiv.org/abs/1803.11175) the authors explain how they create the sentence embedding models and give instructions to implement them with Tensorflow.
 
  * Primary metric used: Accuracy
 
@@ -55,13 +55,13 @@ I chose Accuracy for my main evaluation metric because what we care about most h
 
 * Simple Vectorizing models by accuracy
 
-<img src="./images/skyler_graph_01.PNG" alt="categorical models performances" height="420"/>
+<img src="./images/skyler_graph_01.png" alt="categorical models performances" height="420"/>
 
 The accuracy from the models doesn't improve much from the baseline when using these machine learning models, that have been grid searched for hyper parameter tuning and paired with Count Vectorizer (CV), Term Frequency–Inverse Document Frequency Vectorizer (TF-IDF) or Hash Vectorizer (HASH), tested with just unigrams, bigrams and a combination of both. The best model from these is the Tuned Logistic Regression model that uses TFIDF and an n-gram range accounting for both unigrams and bigrams. It has a Test Accuracy of around 61% and Test Precision of around 60%.
 
 * Embedding models by accuracy
 
-<img src="./images/skyler_graph_02.PNG" alt="embedding models performances" height="420"/>
+<img src="./images/skyler_graph_02.png" alt="embedding models performances" height="420"/>
 
 The best Embedded model performed only slightly better than the Logistic Regression model. It is a Neural Network model using Universal Sentence Encoder to embed the data, and has a Test Accuracy of around 61% and a Test Precision of around 65%.
 
@@ -73,7 +73,7 @@ We notice here that the model correctly labels around 69% of the True statements
 
 * I have plotted word clouds containing the words that appear most in the whole data, and compared that with the word cloud regarding only statements labeled as True (in green) and the word cloud regarding only statements labeled as False (in red):
 
-<img src="./images/complete_wordcloud.JPG" alt="complete cloud" height="600"/>
+<img src="./images/complete_wordcloud.JPG" alt="complete cloud" height="300"/>
 
 <img src="./images/true_wordcloud.JPG" alt="positive cloud" height="300"/>  <img src="./images/false_wordcloud.JPG" alt="false_cloud" height="300"/>
 
@@ -81,7 +81,7 @@ Given the nature of the dataset, it's hard to find useful patterns examining the
 
 * 2D Visualization of words
 
-<img src="./images/word_vectors.JPG" alt="word vectors" height="600"/>
+<img src="./images/word_vectors.JPG" alt="word vectors" height="300"/>
 
 As with the word clouds, not much can be extracted from performing this, but it's a good evaluation to see if the embedding is working properly, since it does show words that appear more commonly together closer in space as well.
 
