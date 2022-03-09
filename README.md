@@ -75,7 +75,9 @@ We notice here that the model correctly labels around 69% of the True statements
 
 <img src="./images/complete_wordcloud.JPG" alt="complete cloud" height="300"/>
 
-<img src="./images/true_wordcloud.JPG" alt="positive cloud" height="300"/>  <img src="./images/false_wordcloud.JPG" alt="false_cloud" height="300"/>
+<img src="./images/true_wordcloud.JPG" alt="positive cloud" height="300"/> 
+
+ <img src="./images/false_wordcloud.JPG" alt="false cloud" height="300"/>
 
 Given the nature of the dataset, it's hard to find useful patterns examining the word clouds alone. They are useful to get an understanding of what's mostly being talked about, but since the overlap is significant between all wordclouds created, not much can be gained from this.
 
@@ -94,6 +96,7 @@ Trying to contextualize human speech is not an easy feat, for humans or computer
   - Elmo
   - GPT 3
   - InferSent
+  
 With a more robust algorithm we could at least open doubt into certain news that are so easily spreadable, and make sure to perform proper due diligence when in contact with dubious information.
 ***
 ## Next Steps
