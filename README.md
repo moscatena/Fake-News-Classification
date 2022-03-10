@@ -1,6 +1,7 @@
 # Fake News Classification
 
 <img src="./images/The_fin_de_siecle_newspaper_proprietor.jpg" alt="header image" height="420"/>
+[Image Source](https://en.wikipedia.org/wiki/Fake_news#/media/File:The_fin_de_si%C3%A8cle_newspaper_proprietor_(cropped).jpg)
 
 **Author**: Marcelo Scatena
 
