@@ -107,7 +107,7 @@ With a more robust algorithm we could at least open doubt into certain news that
   - The model can be adapted to perform in different languages if there is a pre-trained model with that language vocabulary embeded. That would make it useful for different countries and media sources, and further help decrease the spread of fake news.
 
 
-## Reproduce Code:<br />
+## Reproducibility:<br />
 
 To reproduce this work, use terminal or Anaconda to create a new environment with the environment.yml file that has all this projects dpeendencies.
 ```
@@ -120,11 +120,12 @@ conda activate nlp-env
 
 ## For More Information
 
-Please review my full analysis in [my Jupyter Notebook](./Main_Notebook.ipynb) or my [presentation](./presentation.pdf).
+Please review my full analysis in [my Jupyter Notebook](./Main_Notebook.ipynb) or my [presentation](./final_presentation.pdf).
 
 For any additional questions, please contact<br />
-Marcelo Scatena: [LinkedIn](https://uk.linkedin.com/in/marcelo-scatena) | Email: marcelo.oddo@gmail.com<br />
-
+***Marcelo Scatena***: [LinkedIn](https://uk.linkedin.com/in/marcelo-scatena) | ***Email***: marcelo.oddo@gmail.com<br />
+[***Blog***](https://dev.to/moscatena)
+***
 
 #### References:<br />
 Reimche, Roman. (2018). [Comparison of the diffusion of real and fake news in social networks](https://www.researchgate.net/publication/322203544_Comparison_of_the_diffusion_of_real_and_fake_news_in_social_networks).. 10.13140/RG.2.2.35221.22243. <br />
