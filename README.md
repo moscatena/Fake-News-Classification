@@ -89,6 +89,10 @@ Given the nature of the dataset, it's hard to find useful patterns examining the
 As with the word clouds, not much can be extracted from performing this, but it's a good evaluation to see if the embedding is working properly, since it does show words that appear more commonly together closer in space as well.
 
 ***
+## Online Application
+I have created an online application see the model's performance live. The user can input a statement o piece of news, press 'Classify', and the model calculates the odds of the staatement or news being True or Fake.
+
+<img src="./images/app.PNG" alt="App image" height="300"/>
 
 ## Conclusions
 
