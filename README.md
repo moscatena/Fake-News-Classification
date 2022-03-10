@@ -115,7 +115,18 @@ For any additional questions, please contact<br />
 Marcelo Scatena: [LinkedIn](https://uk.linkedin.com/in/marcelo-scatena) | Email: marcelo.oddo@gmail.com<br />
 
 
-##### References:<br />
+#### Reproduce Code:<br />
+
+To reproduce this work, use terminal or Anaconda to create a new environment with the environment.yml file that has all this projects dpeendencies.
+```
+conda env create -f environment.yml
+```
+Then activate with:
+```
+conda activate nlp-env
+```
+
+#### References:<br />
 Reimche, Roman. (2018). [Comparison of the diffusion of real and fake news in social networks](https://www.researchgate.net/publication/322203544_Comparison_of_the_diffusion_of_real_and_fake_news_in_social_networks).. 10.13140/RG.2.2.35221.22243. <br />
 [“Liar, Liar Pants on Fire”: A New Benchmark Dataset for Fake News Detection](https://aclanthology.org/P17-2067) (Wang, ACL 2017).<br />
 [Where is Your Evidence: Improving Fact-checking by Justification Modeling](https://aclanthology.org/W18-5513) (Alhindi et al., 2018).<br />
