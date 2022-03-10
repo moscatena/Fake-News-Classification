@@ -93,7 +93,7 @@ As with the word clouds, not much can be extracted from performing this, but it'
 ## Online Application
 I have created an online application see the model's performance live. The user can input a statement o piece of news, press 'Classify', and the model calculates the odds of the staatement or news being True or Fake.
 
-<img src="./images/app.PNG" alt="App image" height="300"/>
+<img src="./images/app.PNG" alt="App image" height="400"/>
 
 ## Conclusions
 
